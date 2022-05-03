@@ -39,18 +39,17 @@ body {
 }
 
 .wrapper {
-
     height: 100%;
 
     background-color: var(--color-3);
     color: var(--color-text);
     flex: 1;
-    padding: 0 10px;
+
 }
 
 main {
     overflow: hidden;
-    margin: 0 -10px;
+
 }
 
 .btn {
@@ -86,6 +85,7 @@ main {
 
 img {
     width: 100%;
+    object-fit: cover;
 }
 
 .text {
@@ -161,12 +161,18 @@ html {
     .wrapper {
         width: 100%;
     }
+
+    .section{
+        width: 100%;
+        padding: 0 20px;
+    }
+
 }
 
 
 /* header */
 .header {
-    
+
     z-index: 50;
     background: var(--color-1);
 
@@ -180,13 +186,11 @@ html {
 .header-box{
     display: flex;
     align-items: center;
-    width: 100%;
-    
 }
 
 .logo {
     flex: 10%;
-    padding: 10px 0 5px 15px;
+    padding: 10px 0 5px 0;
 }
 
 .logo img {
@@ -230,8 +234,6 @@ html {
     justify-content: flex-end;
     align-items: center;
     flex: 10%;
-    margin-right: 15px;
-    
 }
 
 .entrance {
@@ -306,17 +308,14 @@ html {
 
 #visually-impaired__checkbox {
     display: none;
-    opacity: 0;
 }
 
 #visually-impaired__checkbox:checked~.visually-impaired::before {
     -webkit-mask-image: url(../img/icon/eye-slash-solid.svg);
-
 }
 
 .visually-impaired {
-    display: flex;
-    align-items: center;
+
     position: absolute;
     top: 26.5%;
     right: 20px;
@@ -634,8 +633,8 @@ html {
 }
 
 .banner-content {
-    padding: 30px 10px 30px 10px;
-    width: 100%;
+    padding: 30px 0 30px 0;
+
     z-index: 1;
 
 }
@@ -647,7 +646,7 @@ html {
 
     font-weight: 700;
 
-    margin: 200px 0 20px 20px;
+    margin-top: 200px;
 }
 
 .banner-content__title span {
@@ -962,7 +961,7 @@ html {
 .traditions {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px repeat(4, 275px);
     gap: 10px;
     padding: 20px 15px 10px 15px;
     width: 1650px;
@@ -1042,7 +1041,7 @@ html {
     position: absolute;
     color: #fff;
     z-index: 1;
-    top: 30%;
+    top: 25%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -1075,27 +1074,13 @@ html {
     position: absolute;
     color: #fff;
     z-index: 1;
-    margin: 10% 0 20px 0;
+    margin: 5% 0 0 0;
     left: 0;
     right: 0;
     text-align: center;
 }
 
-.traditions-box:hover .traditions-box__text {
-    display: block;
-    font-size: 18px;
-    font-weight: 400;
-    padding: 0 10%;
 
-    position: absolute;
-    color: #fff;
-    z-index: 1;
-    top: 30%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
 
 /* адаптация traditions*/
 
@@ -1264,8 +1249,8 @@ textarea {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 15px 10px 15px;
-    width: 100%;
+    padding: 20px 0 10px 0;
+
 }
 
 .f-info {
