@@ -22,51 +22,54 @@
 
     <!-- шапка -->
     <header class="header">
+        <div class="header-box section">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            </div>
 
-        <div class="logo">
-            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-        </div>
+            <nav class="menu-box">
 
-        <nav class="menu-box">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
 
-            <input id="menu__toggle" type="checkbox" />
-            <label class="menu__btn" for="menu__toggle">
-                <span></span>
-            </label>
+                <ul class="menu menu__box">
+                    <li><a class="icon-item menu-news anchor menu__item " href="#news">Новости</a>
+                    </li>
+                    <li><a class="icon-item menu-traditions anchor menu__item" href="#traditions">Традиции</a></li>
+                    <li><a class=" icon-item menu-form anchor menu__item" href="#form">Турне</a></li>
+                    <li><a class="icon-item menu-email menu__item " href="#">rus@yandex.ru</a></li>
+                </ul>
+            </nav>
 
-            <ul class="menu menu__box">
-                <li><a class="icon-item menu-news anchor menu__item " href="#news">Новости</a>
-                </li>
-                <li><a class="icon-item menu-traditions anchor menu__item" href="#traditions">Традиции</a></li>
-                <li><a class=" icon-item menu-form anchor menu__item" href="#form">Турне</a></li>
-                <li><a class="icon-item menu-email menu__item " href="#">rus@yandex.ru</a></li>
-            </ul>
-        </nav>
+            <div class="menu-link">
+                <input id="visually-impaired__checkbox" type="checkbox">
+                <label class="icon-item visually-impaired" for="visually-impaired__checkbox"></label>
 
-        <div class="menu-link">
-            <input id="visually-impaired__checkbox" type="checkbox">
-            <label class="icon-item visually-impaired" for="visually-impaired__checkbox"></label>
+                <a data-fancybox data-src="#hidden-content" href="javascript:;" class="icon-item entrance__btn btn">
+                    Вход</a>
+                <div class="entrance" id="hidden-content">
+                    <form action="#" class="entrance-form">
 
-            <a data-fancybox data-src="#hidden-content" href="javascript:;" class="icon-item entrance__btn btn">
-                Вход</a>
-            <div class="entrance" id="hidden-content">
-                <form action="#" class="entrance-form">
+                        <label for="entrance-email">E-mail</label>
+                        <input type="text" id="entrance-email" pattern="[a-zA-Z0-9]" placeholder="Email" required>
 
-                    <label for="entrance-email">E-mail</label>
-                    <input type="text" id="entrance-email" pattern="[a-zA-Z0-9]" placeholder="Email" required>
+                        <label for="entrance-password">Password</label>
+                        <input type="password" id="entrance-password" pattern="[a-zA-Z0-9]" placeholder="Password"
+                            required>
+                        <p class="forgot-password">Забыли пароль? <a href="#">Восстановление пароля</a></p>
 
-                    <label for="entrance-password">Password</label>
-                    <input type="password" id="entrance-password" pattern="[a-zA-Z0-9]" placeholder="Password" required>
-                    <p class="forgot-password">Забыли пароль? <a href="#">Восстановление пароля</a></p>
+                        <div class="form-buttons">
+                            <button type="submit" class="btn">Войти</button>
 
-                    <div class="form-buttons">
-                        <button type="submit" class="btn">Войти</button>
-
-                        <button type="reset" class="btn">Очистить</button>
-                    </div>
-                </form>
+                            <button type="reset" class="btn">Очистить</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
+
     </header>
 
     <div class="wrapper">
@@ -76,25 +79,13 @@
         <!-- основной контент -->
         <main>
             <section class="banner">
-                <div class="banner-section">
+                <div class="section">
                     <div class="banner-content">
-                        <h1 data-wow-delay="0.1s" class="benefits__img wow animate__fadeInDown banner-content__title">
-                            Узнайте больше о традициях и культуре разных народов
-                            <span>России!</span>
+                        <h1 data-wow-delay="0.1s" class="benefits__img wow animate__fadeIn banner-content__title">
+                            Узнайте больше <br> 
+                            о традициях и культуре <br> 
+                            разных народов <span>России!</span>
                         </h1>
-                        <p data-wow-delay="0.5s" class="benefits__img wow animate__fadeIn banner-content__text">
-                            <b>Российская Федерация</b> — огромная страна. Мы занимаем
-                            колоссальное
-                            пространство,
-                            которое больше целого материка. Многие европейские страны десятки раз поместились бы в
-                            пространстве нашего государства. При этом население у нас не самое многочисленное на
-                            планете,
-                            есть страны с гораздо большим числом жителей. Тем не менее, свыше 141 000 000 человек –
-                            это
-                            впечатляющее число, и оно не монолитное. В него входят представители самых разных
-                            народов.
-                            Нельзя выделить одну основную отдельно взятую нацию, и это закреплено в Конституции.
-                        </p>
                     </div>
                 </div>
 
@@ -298,12 +289,11 @@
 
                     <label data-wow-delay="0.3s" class="benefits__img wow animate__fadeInDown"
                         for="tour-name">Наименование тура<span>*</span><br>
-                        <textarea id="tour-name"  placeholder="Наименование тура"
-                            required></textarea></label>
+                        <textarea id="tour-name" placeholder="Наименование тура" required></textarea></label>
 
                     <label data-wow-delay="0.3s" class="benefits__img wow animate__fadeInDown"
                         for="comment">Комментарий<br>
-                        <textarea id="comment"  placeholder="Комментарий"></textarea></label>
+                        <textarea id="comment" placeholder="Комментарий"></textarea></label>
 
 
                     <div class="form-buttons">
@@ -325,31 +315,34 @@
     <!-- футер -->
     <footer>
         <div class="footer">
-            <div class="f-info">
-                <a href="index.html"><img src="img/logo-min.png" alt="logo"></a>
-                <p class="f-info__text">Если у вас есть интересные рассказы о традициях разных народов России,
-                    пишите нам о них на электронную почту <a href="#">rus@yandex.ru</a></p>
+            <div class="footer-box section">
+                <div class="f-info">
+                    <a href="index.html"><img src="img/logo-min.png" alt="logo"></a>
+                    <p class="f-info__text">Если у вас есть интересные рассказы о традициях разных народов России,
+                        пишите нам о них на электронную почту <a href="#">rus@yandex.ru</a></p>
+                </div>
+                <ul class="social">
+                    <li><a href="#"><img class="social-network" src="img/icon/social-network/VK.png" alt="VK"></a>
+                    </li>
+                    <li><a href="#"><img class="social-network" src="img/icon/social-network/Facebook.png"
+                                alt="Facebook"></a></li>
+                    <li><a href="#"><img class="social-network" src="img/icon/social-network/Telegram.png"
+                                alt="Telegram"></a></li>
+                    <li><a href="#"><img class="social-network" src="img/icon/social-network/YouTube.png"
+                                alt="YouTube"></a>
+                    </li>
+                    <li><a href="#"><img class="social-network" src="img/icon/social-network/Twitter.png"
+                                alt="Twitter"></a>
+                    </li>
+                </ul>
+
+                <ul class="footer-contact-info">
+                    <li><a href="#">127299, Москва, ул. Волкова, 20</a></li>
+                    <li><a href="#">т. +7 985 845-28-54</a></li>
+                    <li><a href="#">Главный редактор: <i>Анисимов Даниил</i></a></li>
+                    <li><a href="#">Помощник главного редактора: <i>Анисимов Даниил</i></a></li>
+                </ul>
             </div>
-            <ul class="social">
-                <li><a href="#"><img class="social-network" src="img/icon/social-network/VK.png" alt="VK"></a>
-                </li>
-                <li><a href="#"><img class="social-network" src="img/icon/social-network/Facebook.png"
-                            alt="Facebook"></a></li>
-                <li><a href="#"><img class="social-network" src="img/icon/social-network/Telegram.png"
-                            alt="Telegram"></a></li>
-                <li><a href="#"><img class="social-network" src="img/icon/social-network/YouTube.png" alt="YouTube"></a>
-                </li>
-                <li><a href="#"><img class="social-network" src="img/icon/social-network/Twitter.png" alt="Twitter"></a>
-                </li>
-            </ul>
-
-            <ul class="footer-contact-info">
-                <li><a href="#">127299, Москва, ул. Волкова, 20</a></li>
-                <li><a href="#">т. +7 985 845-28-54</a></li>
-                <li><a href="#">Главный редактор: <i>Анисимов Даниил</i></a></li>
-                <li><a href="#">Помощник главного редактора: <i>Анисимов Даниил</i></a></li>
-            </ul>
-
 
 
         </div>
