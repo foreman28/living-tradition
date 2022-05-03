@@ -1,0 +1,116 @@
+
+
+
+//Eсли: вниз 1080px от начала документа
+
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+  if (document.body.scrollTop > 1080 || document.documentElement.scrollTop > 1080) {
+    document.getElementById("up").style.display = "block";
+  }
+  else {
+    document.getElementById("up").style.display = "none";
+  }
+}
+
+/* переход к началу документа */
+
+function topFunction() {
+  $('html, body').animate({
+    scrollTop: document.body.scrollTop
+  }, 0);
+}
+
+/* scroll вниз на ~100vh */
+
+function downFunction() {
+
+  if ($('nav').hasClass('down')) {
+    var movePos = $(window).scrollTop() + $(window).height();
+  }
+
+  $('html, body, main').animate({
+    scrollTop: movePos - 80 - document.documentElement.scrollTop
+  }, 0);
+  ;
+}
+
+
+/* banner-item */
+
+$('.banner-item').mouseenter(function (e) {
+  var x = Math.random();
+  var y = Math.random();
+  if (y >= 0.5) {
+    x = x * 30
+  }
+  else {
+    x = x * -30
+  }
+
+  let moveOnX = e.pageX / (50);
+  let moveOnY = e.pageY / (10);
+  $(this).css('transform', 'rotate(' + x + 'deg)');
+})
+
+
+/* anchor */
+
+$(document).ready(function () {
+  $("a.anchor").click(function () {
+    elementClick = $(this).attr("href")
+    destination = $(elementClick).offset().top;
+    $("html").animate({ scrollTop: destination - 100 }, 0);
+    return false;
+  });
+});
+
+
+/* каждые 1000 м.сек (1 сек)
+
+setInterval(function(){
+  $("a.anchor").click(function () {
+    console.log(1);
+  })
+}, 1000);
+*/
+
+
+$(function () {
+
+
+  /* slider */
+
+  $('.slider__inner').slick(
+    
+  );
+
+
+  /* animate */
+
+  wow = new WOW(
+    {
+      boxClass: 'wow',
+      animateClass: 'animate__animated',
+      offset: 0,
+      mobile: true,
+      live: true
+    }
+  )
+  wow.init();
+});
+
+
+/* max-1650px */
+
+/* 
+if (window.screen.width <= 1650 ) {
+  $('.slider__inner').slick({
+    infinite: true,
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 1
+  });
+}
+ */

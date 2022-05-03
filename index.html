@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Живая традиция</title>
+
+    <link rel="shortcut icon" href="img/logo-min.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/slider/animate.min.css">
+    <link rel="stylesheet" href="css/slider/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+    <!-- шапка -->
+    <header class="header">
+
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+        </div>
+
+        <nav class="menu-box">
+
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+
+            <ul class="menu menu__box">
+                <li><a class="icon-item menu-news anchor menu__item " href="#news">Новости</a>
+                </li>
+                <li><a class="icon-item menu-traditions anchor menu__item" href="#traditions">Традиции</a></li>
+                <li><a class=" icon-item menu-form anchor menu__item" href="#form">Турне</a></li>
+                <li><a class="icon-item menu-email menu__item " href="#">rus@yandex.ru</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-link">
+            <input id="visually-impaired__checkbox" type="checkbox">
+            <label class="icon-item visually-impaired" for="visually-impaired__checkbox"></label>
+
+            <a data-fancybox data-src="#hidden-content" href="javascript:;" class="icon-item entrance__btn btn">
+                Вход</a>
+            <div class="entrance" id="hidden-content">
+                <form action="#" class="entrance-form">
+
+                    <label for="entrance-email">E-mail</label>
+                    <input type="text" id="entrance-email" pattern="[a-zA-Z0-9]" placeholder="Email" required>
+
+                    <label for="entrance-password">Password</label>
+                    <input type="password" id="entrance-password" pattern="[a-zA-Z0-9]" placeholder="Password" required>
+                    <p class="forgot-password">Забыли пароль? <a href="#">Восстановление пароля</a></p>
+
+                    <div class="form-buttons">
+                        <button type="submit" class="btn">Войти</button>
+
+                        <button type="reset" class="btn">Очистить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+
+
+
+        <!-- основной контент -->
+        <main>
+            <section class="banner">
+                <div class="banner-section">
+                    <div class="banner-content">
+                        <h1 data-wow-delay="0.1s" class="benefits__img wow animate__fadeInDown banner-content__title">
+                            Узнайте больше о традициях и культуре разных народов
+                            <span>России!</span>
+                        </h1>
+                        <p data-wow-delay="0.5s" class="benefits__img wow animate__fadeIn banner-content__text">
+                            <b>Российская Федерация</b> — огромная страна. Мы занимаем
+                            колоссальное
+                            пространство,
+                            которое больше целого материка. Многие европейские страны десятки раз поместились бы в
+                            пространстве нашего государства. При этом население у нас не самое многочисленное на
+                            планете,
+                            есть страны с гораздо большим числом жителей. Тем не менее, свыше 141 000 000 человек –
+                            это
+                            впечатляющее число, и оно не монолитное. В него входят представители самых разных
+                            народов.
+                            Нельзя выделить одну основную отдельно взятую нацию, и это закреплено в Конституции.
+                        </p>
+                    </div>
+                </div>
+
+                <nav onclick="downFunction()" class="down">
+                    <div class="icon-item down-item"></div>
+                </nav>
+
+
+            </section>
+
+            <!-- Новости -->
+
+            <section id="news" class="slider news">
+
+                <div class="news__title-item">
+                    <h1 data-wow-delay="0.1s" class="benefits__img wow animate__fadeIn title">Новости
+                        <span>России</span>
+                    </h1>
+                </div>
+
+                <div data-wow-delay="0.2s" class="benefits__img wow animate__zoomIn slider__inner">
+
+                    <div class="s1">
+                        <div class="news-item">
+                            <div class="news-box">
+                                <h3 class="news__title">Тофалары</h3>
+                                <p class="news__text">Описание народов России невозможно без тофаларов, этноса
+                                    численностью более 700 человек, который дислоцируется на территории
+                                    Иркутской области. Несмотря на то что большинство тофаларов – православные,
+                                    шаманизм сохраняется и по сей день.
+                                    Основная деятельность этих людей – охота и оленеводство. Некогда излюбленным
+                                    напитком было молоко сохатых, которое пили кипяченым или добавляли в чай. До
+                                    тех пор, пока тофалары не стали оседлым народом, их жилищем был конический
+                                    чум. В последнее время чистокровность народа утрачивается. Однако традиции,
+                                    обычаи и культура древних тофаларов сохранились до сих пор.</p>
+                                <a href="#" class="news__text news-link">Читать далее...</a>
+                            </div>
+                            <div class="news__img-box"><img src="img/news/tofalars.png" alt="tofalars">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="s1">
+                        <div class="news-item">
+                            <div class="news-box">
+                                <h3 class="news__title">Водлозеры</h3>
+                                <p class="news__text">Далеко не всем известно о том, что сегодня в Карелии живут
+                                    озерные люди или так называемые водлозеры. Правда, до наших дней сохранилось
+                                    всего пять деревень, жителей же насчитывается не более 550 человек. Их
+                                    прародителями были переселенцы из Москвы и Новгорода. Несмотря на это в
+                                    Водлозерье до сих пор чтутся славянские обычаи. Например, в лес путь
+                                    заказан, если предварительно не задобрить его хозяина – лешего. Каждый
+                                    охотник обязательно должен сделать подношение: отнести убитое животное в
+                                    дар.</p>
+                                <a href="#" class="news__text news-link">Читать далее...</a>
+                            </div>
+                            <div class="news__img-box"><img src="img/news/vodlozers.png" alt="tofalars">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="s1">
+                        <div class="news-item">
+                            <div class="news-box">
+                                <h3 class="news__title">Инклюзивный музей</h3>
+                                <p class="news__text">До 15 мая проект «Инклюзивный музей» проводит прием заявок
+                                    на грантовый конкурс. Его цель — поощрять создание и развитие инклюзивных
+                                    проектов для детей с особенностями ментального развития, а также их
+                                    популяризацию в профессиональном сообществе и среди широкой публики. Музеи
+                                    могут подать на рассмотрение специальные программы, направленные на
+                                    социализацию, реабилитацию, творческое самовыражение и профориентацию детей
+                                    с особенностями ментального развития. Победители конкурса получат финансовую
+                                    поддержку в размере до 250 тысяч рублей на реализацию своих проектов.</p>
+                                <a href="#" class="news__text news-link">Читать далее...</a>
+                            </div>
+                            <div class="news__img-box"><img src="img/news/museum.png" alt="tofalars">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="s1">
+                        <div class="news-item">
+                            <div class="news-box">
+                                <h3 class="news__title">Традиция бить посуду</h3>
+                                <p class="news__text">Фразу «на счастье» придумали гости, которые хотели таким
+                                    способом утешить хозяев, которые разбили посуду. Она стоила тогда очень
+                                    дорого, поэтому, конечно, хозяева расстраивались, когда разбивали ее.
+                                    Достоверно неизвестно, какая именно теория была основой для появления этой
+                                    традиции. Еще одно поверье Древней Руси также было связано с тем, что
+                                    нечистая сила могла сама вселиться уже в разбитую посуду, поэтому ее ни в
+                                    коем случае нельзя было хранить дома, осколки сразу выкидывали. Держать ее
+                                    дома было опасно, так как она привлекала проблемы, и хозяева должны были
+                                    быстро выкинуть осколки, чтобы нечисть не стала хозяином дома.</p>
+                                <a href="#" class="news__text news-link">Читать далее...</a>
+                            </div>
+                            <div class="news__img-box"><img src="img/news/dishes.png" alt="tofalars">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Традиции -->
+            <section id="traditions" class="traditions">
+
+                <div class="traditions-title-item">
+                    <h1 data-wow-delay="0.1s" class="benefits__img wow animate__fadeIn title">Традиции
+                        <span>России</span>
+                    </h1>
+                </div>
+
+                <a href="#" data-wow-delay="0.1s" class="benefits__img wow animate__zoomIn traditions-box">
+                    <h3 class="traditions-box__title">Традиция №1</h3>
+                    <p class="traditions-box__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
+                        voluptate. Sapiente dolorum perferendis minus assumenda ut quam nihil iste est id, fuga minima
+                        veritatis quidem laudantium autem praesentium asperiores fugit voluptatum iusto nobis! Nisi,
+                        dolor alias? Consequatur delectus officiis ipsa consequuntur rerum temporibus maxime corrupti
+                        placeat iste, possimus numquam, aliquam nihil tenetur omnis ad fugiat quis, iusto laboriosam?
+                        Hic iure quidem odio nihil accusantium, deserunt saepe quod cum, quisquam cumque non quibusdam
+                        reiciendis assumenda itaque unde ratione officiis laborum? Magnam a omnis nihil voluptas maiores
+                        facere quibusdam laborum libero dolorem, laboriosam fugit ab porro dolore! Nobis quidem
+                        voluptates dolorem consequuntur.</p>
+                    <img src="img/traditions/traditions4.jpg" alt="traditions">
+                </a>
+
+
+                <a href="#" data-wow-delay="0.2s" class="benefits__img wow animate__zoomIn traditions-box">
+                    <h3 class="traditions-box__title">Традиция №2</h3>
+                    <img src="img/traditions/traditions1.jpg" alt="traditions">
+                </a>
+
+                <a href="#" data-wow-delay="0.4s" class="benefits__img wow animate__zoomIn traditions-box">
+                    <h3 class="traditions-box__title">Традиция №3</h3>
+                    <img src="img/traditions/traditions2.jpg" alt="traditions">
+                </a>
+
+                <a href="#" data-wow-delay="0.2s" class="benefits__img wow animate__zoomIn traditions-box">
+                    <h3 class="traditions-box__title">Традиция №4</h3>
+                    <img src="img/traditions/traditions3.jpg" alt="traditions">
+                </a>
+
+                <a href="#" data-wow-delay="0.4s" class="benefits__img wow animate__zoomIn traditions-box">
+                    <h3 class="traditions-box__title">Традиция №5</h3>
+                    <img src="img/traditions/traditions5.jpg" alt="traditions">
+                </a>
+
+                <a href="#" data-wow-delay="0.2s" class="benefits__img wow animate__zoomIn traditions-box">
+                    <h3 class="traditions-box__title">Традиция №6</h3>
+                    <img src="img/traditions/traditions6.jpg" alt="traditions">
+                </a>
+
+                <a href="#" data-wow-delay="0.4s" class="benefits__img wow animate__zoomIn traditions-box">
+                    <h3 class="traditions-box__title">Традиция №7</h3>
+                    <img src="img/traditions/traditions7.jpg" alt="traditions">
+                </a>
+
+                <a href="#" data-wow-delay="0.2s" class="benefits__img wow animate__zoomIn traditions-box">
+                    <h3 class="traditions-box__title">Традиция №8</h3>
+                    <img src="img/traditions/traditions8.jpg" alt="traditions">
+                </a>
+
+                <a href="#" data-wow-delay="0.1s" class="benefits__img wow animate__zoomIn traditions-box">
+                    <h3 class="traditions-box__title">Традиция №9</h3>
+                    <img src="img/traditions/traditions9.jpg" alt="traditions">
+                </a>
+
+                <a href="#" data-wow-delay="0.4s" class="benefits__img wow animate__zoomIn traditions-box">
+                    <h3 class="traditions-box__title">Традиция №10</h3>
+                    <p class="traditions-box__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
+                        voluptate. Sapiente dolorum perferendis minus assumenda ut quam nihil iste est id, fuga minima
+                        veritatis quidem laudantium autem praesentium asperiores fugit voluptatum iusto nobis! Nisi,
+                        dolor alias? Consequatur delectus officiis ipsa consequuntur rerum temporibus maxime corrupti
+                        placeat iste, possimus numquam, aliquam nihil tenetur omnis ad fugiat quis, iusto laboriosam?
+                        Hic iure quidem odio nihil accusantium, deserunt saepe quod cum, quisquam cumque non quibusdam
+                        reiciendis assumenda itaque unde ratione officiis laborum? Magnam a omnis nihil voluptas maiores
+                        facere quibusdam laborum libero dolorem, laboriosam fugit ab porro dolore! Nobis quidem
+                        voluptates dolorem consequuntur.</p>
+                    <img src="img/traditions/traditions10.jpg" alt="traditions">
+                </a>
+            </section>
+
+            <!-- Заявка на турне -->
+            <section id="form" class="section-form">
+                <form action="#" class="form">
+
+                    <h2 data-wow-delay="0.1s" class="benefits__img wow animate__fadeIn title form-title">Заявка для
+                        просмотра турне</h2>
+
+                    <div class="form__name-email">
+                        <label data-wow-delay="0.3s" class="benefits__img wow animate__fadeInDown" for="name">Ваше
+                            имя<span>*</span><br>
+                            <input type="text" id="name" pattern="[А-Яа-яЁё]" placeholder="Имя" required></label>
+
+                        <label data-wow-delay="0.3s" class="benefits__img wow animate__fadeInDown"
+                            for="email">E-mail<span>*</span><br>
+                            <input type="email" id="email" pattern="[a-zA-Z0-9]" placeholder="Email" required></label>
+                    </div>
+
+                    <label data-wow-delay="0.3s" class="benefits__img wow animate__fadeInDown"
+                        for="tour-name">Наименование тура<span>*</span><br>
+                        <textarea id="tour-name"  placeholder="Наименование тура"
+                            required></textarea></label>
+
+                    <label data-wow-delay="0.3s" class="benefits__img wow animate__fadeInDown"
+                        for="comment">Комментарий<br>
+                        <textarea id="comment"  placeholder="Комментарий"></textarea></label>
+
+
+                    <div class="form-buttons">
+                        <button type="submit" data-wow-delay="0.3s"
+                            class="benefits__img wow animate__zoomIn btn">Посмотреть</button>
+
+                        <button type="reset" data-wow-delay="0.3s"
+                            class="benefits__img wow animate__zoomIn btn">Очистить</button>
+                    </div>
+
+                </form>
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- футер -->
+    <footer>
+        <div class="footer">
+            <div class="f-info">
+                <a href="index.html"><img src="img/logo-min.png" alt="logo"></a>
+                <p class="f-info__text">Если у вас есть интересные рассказы о традициях разных народов России,
+                    пишите нам о них на электронную почту <a href="#">rus@yandex.ru</a></p>
+            </div>
+            <ul class="social">
+                <li><a href="#"><img class="social-network" src="img/icon/social-network/VK.png" alt="VK"></a>
+                </li>
+                <li><a href="#"><img class="social-network" src="img/icon/social-network/Facebook.png"
+                            alt="Facebook"></a></li>
+                <li><a href="#"><img class="social-network" src="img/icon/social-network/Telegram.png"
+                            alt="Telegram"></a></li>
+                <li><a href="#"><img class="social-network" src="img/icon/social-network/YouTube.png" alt="YouTube"></a>
+                </li>
+                <li><a href="#"><img class="social-network" src="img/icon/social-network/Twitter.png" alt="Twitter"></a>
+                </li>
+            </ul>
+
+            <ul class="footer-contact-info">
+                <li><a href="#">127299, Москва, ул. Волкова, 20</a></li>
+                <li><a href="#">т. +7 985 845-28-54</a></li>
+                <li><a href="#">Главный редактор: <i>Анисимов Даниил</i></a></li>
+                <li><a href="#">Помощник главного редактора: <i>Анисимов Даниил</i></a></li>
+            </ul>
+
+
+
+        </div>
+
+        <div class="copyright">
+            <p>© 2021—2022 Правообладатель контента </p>
+        </div>
+
+        <button onclick="topFunction()" title="up" class="icon-item" id="up"></button>
+
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
