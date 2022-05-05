@@ -33,6 +33,7 @@
 }
 
 body {
+    position: relative;
     font-family: 'Brygada 1918', serif;
     font-weight: normal;
     font-size: 18px;
@@ -53,7 +54,6 @@ body {
 
 main {
     overflow: hidden;
-
 }
 
 .btn {
@@ -174,6 +174,12 @@ html {
 
 }
 
+@media (max-width: 400px) {
+    .title {
+        font-size: 36px;
+    }
+
+}
 
 /* header */
 .header {
@@ -191,6 +197,7 @@ html {
 .header-box {
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
 .logo {
@@ -316,6 +323,7 @@ html {
 }
 
 #visually-impaired__checkbox:checked~.visually-impaired::before {
+    mask-image: url(../img/icon/eye-slash-solid.svg);
     -webkit-mask-image: url(../img/icon/eye-slash-solid.svg);
 }
 
@@ -323,9 +331,8 @@ html {
 
     position: absolute;
     top: 26.5%;
-    right: 20px;
-    width: 50px;
-    height: 50px;
+    right: 5px;
+
     cursor: pointer;
     z-index: 1;
 }
@@ -354,17 +361,15 @@ html {
 #menu__toggle {
     display: none;
     opacity: 0;
-
+    
 }
 
 @media (max-width: 1000px) {
 
-    .header {
-        padding-top: 10px;
-    }
+
 
     .logo {
-        padding: 0 5px 0 0;
+        padding: 0 15px 0 0;
     }
 
     #menu__toggle:checked~.menu__btn>span {
@@ -384,7 +389,12 @@ html {
 
     #menu__toggle:checked~.menu__box {
         visibility: visible;
-        right: 0;
+        right: 0; 
+    }
+
+    #menu__toggle:checked>html {
+    
+        overflow: hidden;
     }
 
     .menu__btn {
@@ -445,7 +455,6 @@ html {
 
         transition-duration: .25s;
         text-align: center;
-
     }
 
     .menu__item {
@@ -497,12 +506,10 @@ html {
     .menu-link {
         margin-right: 60px;
     }
+}
 
-    .visually-impaired {
+@media (max-width: 425px) {
 
-        right: 5px;
-
-    }
 }
 
 /* -mask-image- */
@@ -813,11 +820,9 @@ html {
     right: 0;
 
     z-index: -1;
-    opacity: 1;
+    opacity: 0.8;
     border-radius: 25px;
 }
-
-
 
 .news-box {
     padding: 30px;
@@ -945,6 +950,69 @@ html {
         flex: 100%;
     }
 
+    .news-item1::before {
+        content: "";
+        background: url(../img/news/tofalars.png);
+        background-size: cover;
+    
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    
+        z-index: -2;
+        opacity: 1;
+        border-radius: 25px;
+    }
+    
+    .news-item2::before {
+        content: "";
+        background: url(../img/news/vodlozers.png);
+        background-size: cover;
+    
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    
+        z-index: -2;
+        opacity: 1;
+        border-radius: 25px;
+    }
+    
+    .news-item3::before {
+        content: "";
+        background: url(../img/news/museum.png);
+        background-size: cover;
+    
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    
+        z-index: -2;
+        opacity: 1;
+        border-radius: 25px;
+    }
+    
+    .news-item4::before {
+        content: "";
+        background: url(../img/news/dishes.png);
+        background-size: cover;
+    
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    
+        z-index: -2;
+        opacity: 1;
+        border-radius: 25px;
+    }
 
 }
 
@@ -996,8 +1064,33 @@ html {
         height: 450px;
     }
 
-    .news-box {}
+    .news-box {
+        padding: 10px;
+        height: 100%;
+    }
 
+    .news-link{
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+        z-index: 2;
+    }
+
+
+
+    .news-box::before {
+        content: "";
+        background: var(--color-1);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        opacity: 1;
+        border-radius: 25px;
+        background: linear-gradient(0deg, var(--color-1) 10%, rgba(0,0,0,0) 30%);
+    }
 }
 
 /* traditions */
@@ -1145,8 +1238,7 @@ html {
 
 @media (max-width: 1400px) {
 
-    .traditions-box:hover .traditions-box__title:not(
-        .traditions-box:nth-child(2) .traditions-box__title,
+    .traditions-box:hover .traditions-box__title:not(.traditions-box:nth-child(2) .traditions-box__title,
         .traditions-box:nth-child(11) .traditions-box__title) {
         font-size: 2.5vw;
     }
@@ -1172,8 +1264,7 @@ html {
         display: none;
     }
 
-    .traditions a:not(
-        .traditions a:nth-child(2),
+    .traditions a:not(.traditions a:nth-child(2),
         .traditions a:nth-child(11)) {
         display: block;
         border-radius: 10px;
@@ -1187,6 +1278,13 @@ html {
     .traditions-box {}
 }
 
+@media (max-width: 1100px) {
+    .traditions-title-item {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+}
 
 /* form */
 
