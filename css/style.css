@@ -23,10 +23,11 @@
     /*  BG */
 
     --color-4: #4788ce;
-    /*  Active */
+    /*  active */
 
     --color-5: #c42034;
-    /*  Hover */
+    /*  hover */
+
 
 }
 
@@ -36,30 +37,32 @@ body {
     font-weight: normal;
     font-size: 18px;
     line-height: 1.5;
+    background-color: var(--color-3);
+    color: var(--color-2);
+
+}
+
+.wrapper {
+    height: 100%;
 
     background-color: var(--color-3);
     color: var(--color-2);
-}
+    flex: 1;
 
+}
 
 main {
     overflow: hidden;
-    height: 100%;
-    flex: 1;
-
-    background-color: var(--color-3);
-    color: var(--color-2);
 }
 
 .btn {
     font-weight: 700;
+    background-color: var(--color-5);
     padding: 12px 35px 12px 35px;
     border-radius: 50px;
-
     text-align: center;
     text-transform: uppercase;
 
-    background-color: var(--color-5);
     border: 2px solid var(--color-5);
     transition: all 0.3s;
 }
@@ -75,7 +78,7 @@ main {
     font-weight: 700;
     color: var(--color-1);
 
-    z-index: 5;
+    z-index: 10;
     margin-top: 0;
 }
 
@@ -126,12 +129,13 @@ html {
 
 
 .down:hover {
-    opacity: 0.9;
+    opacity: 1;
     transition: all 0.1s;
     box-shadow: 0px 0px 10px var(--color-3);
 
     border: 3px solid var(--color-5);
 }
+
 
 #up {
     display: none;
@@ -159,7 +163,7 @@ html {
 /* адаптация общих стилей*/
 
 @media (max-width: 1650px) {
-    main {
+    .wrapper {
         width: 100%;
     }
 
@@ -167,22 +171,27 @@ html {
         width: 100%;
         padding: 0 20px;
     }
+
 }
 
 @media (max-width: 400px) {
     .title {
         font-size: 36px;
     }
+
 }
 
 /* header */
 .header {
+
     z-index: 50;
     background: var(--color-1);
-    position: sticky;
 
+    position: sticky;
     top: 0px;
+
     height: 105px;
+
 }
 
 .header-box {
@@ -206,12 +215,13 @@ html {
     justify-content: center;
 }
 
-
+.menu-box {}
 
 .menu {
     display: flex;
     justify-content: space-between;
 }
+
 
 .menu li {
     padding: 0 45px;
@@ -228,6 +238,7 @@ html {
 
 .menu li a {
     margin: 0 0 0 25px;
+
 }
 
 .menu-link {
@@ -286,11 +297,10 @@ html {
 }
 
 .visually-impaired {
+
     height: 51px;
     width: 51px;
-
     border-radius: 50%;
-
     background-color: var(--color-5);
     transition: all 0.3s;
     border: 2px solid var(--color-5);
@@ -318,6 +328,7 @@ html {
 }
 
 .visually-impaired {
+
     position: absolute;
     top: 26.5%;
     right: 15px;
@@ -326,10 +337,6 @@ html {
     z-index: 1;
 }
 
-#menu__toggle {
-    display: none;
-    opacity: 0;
-}
 
 /* адаптация header*/
 
@@ -351,7 +358,16 @@ html {
     }
 }
 
+#menu__toggle {
+    display: none;
+    opacity: 0;
+
+}
+
 @media (max-width: 1030px) {
+
+
+
     .logo {
         padding: 0 15px 0 0;
     }
@@ -375,6 +391,11 @@ html {
         visibility: visible;
         right: 0;
     }
+
+    /*     #menu__toggle:checked html {
+    
+        overflow: hidden;
+    } */
 
     .menu__btn {
         display: flex;
@@ -434,7 +455,6 @@ html {
 
         transition-duration: .25s;
         text-align: center;
-
     }
 
     .menu__item {
@@ -474,6 +494,10 @@ html {
 
     .menu__item:hover {
         background-color: #CFD8DC;
+    }
+
+    .menu-link {
+        margin-right: 100px;
     }
 
     .menu-link {
@@ -532,6 +556,7 @@ html {
     -webkit-mask-image: url(../img/icon/envelope-solid.svg);
 }
 
+
 .icon-item:hover {
     color: var(--color-5);
 }
@@ -548,6 +573,7 @@ html {
     mask-image: url(../img/icon/user-tie-solid.svg);
     -webkit-mask-image: url(../img/icon/user-tie-solid.svg);
     width: 18px;
+
     left: 15px;
 }
 
@@ -585,6 +611,7 @@ html {
     mask-image: url(../img/icon/eye-solid.svg);
     -webkit-mask-image: url(../img/icon/eye-solid.svg);
     top: 22%;
+
 }
 
 
@@ -605,7 +632,9 @@ html {
     right: 0;
     bottom: 0;
 
+
     background: url(../img/traditions/traditions4.jpg) center no-repeat;
+    /* background-position: 30% 10%; */
     opacity: 1;
     background-size: cover;
 
@@ -636,7 +665,10 @@ html {
 .banner-content__title {
     color: var(--color-3);
     font-size: 76px;
+
+
     font-weight: 700;
+
     margin-top: 200px;
 }
 
@@ -648,18 +680,21 @@ html {
 
 .banner-content__text {
     color: var(--color-3);
+
     font-weight: normal;
+
     max-width: 900px;
     margin: 0 auto;
 }
 
 
-
+.title-img {}
 
 .title-img-item {
     opacity: 0.8;
     width: 750px;
     height: 499.5px;
+
 }
 
 /* адаптация banner*/
@@ -714,8 +749,9 @@ html {
 
 @media (max-width: 500px) {
     .banner-content__title {
-        margin-top: 20px;
+        margin-top: 0px;
     }
+
 }
 
 /* news */
@@ -749,8 +785,11 @@ html {
     transform: rotate(180deg);
 }
 
+.news__title-item{
+    /* white-space: nowrap; */
+}
 
-.news__section-box {
+.s1 {
     margin: 0 50px;
 }
 
@@ -834,6 +873,7 @@ html {
 
 /* -slider- */
 
+.slider {}
 
 .slider__inner {
     position: relative;
@@ -884,7 +924,7 @@ html {
 
 @media (max-width: 1650px) {
 
-    .news__section-box {
+    .s1 {
         margin: 0 30px;
     }
 
@@ -1001,7 +1041,7 @@ html {
 
 @media (max-width: 800px) {
 
-    .news__section-box {
+    .s1 {
         margin: 0 5px;
     }
 
@@ -1038,6 +1078,8 @@ html {
         z-index: 2;
     }
 
+
+
     .news-box::before {
         content: "";
         background: var(--color-1);
@@ -1065,7 +1107,7 @@ html {
     margin: 0 auto;
 }
 
-.traditions__title-item:nth-child(1) {
+.traditions-title-item:nth-child(1) {
     grid-column: 1/5;
     grid-row: 1/2;
 }
@@ -1140,8 +1182,7 @@ html {
     text-align: center;
 }
 
-.traditions-box:hover .traditions-box__title:not(
-    .traditions-box:nth-child(2) .traditions-box__title,
+.traditions-box:hover .traditions-box__title:not(.traditions-box:nth-child(2) .traditions-box__title,
     .traditions-box:nth-child(11) .traditions-box__title) {
     display: block;
     font-size: 32px;
@@ -1231,25 +1272,19 @@ html {
         border-radius: 10px;
     }
 
-    .traditions__title-item:nth-child(1) {
+    .traditions-title-item:nth-child(1) {
         grid-column: 1/3;
         grid-row: 1/2;
     }
 
-   
+    .traditions-box {}
 }
 
 @media (max-width: 1100px) {
-    .traditions__title-item {
+    .traditions-title-item {
         display: flex;
         justify-content: center;
         align-items: flex-end;
-    }
-}
-
-@media (max-width: 420px) {
-    .traditions {
-        grid-template-columns: 1fr;
     }
 }
 
@@ -1511,7 +1546,7 @@ li {
 
 @media (max-width: 760px) {
 
-    .footer-contact-info {
+    .footer-contact-info{
         text-align: center;
     }
 

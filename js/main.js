@@ -24,7 +24,7 @@ function topFunction() {
 
 
 
-/* scroll вниз до news */
+/* scroll вниз на 100vh */
 
 function downFunction() {
 
@@ -41,12 +41,16 @@ function downFunction() {
 
 
 /* якорь */
+
+$(document).ready(function () {
   $("a.anchor").click(function () {
     elementClick = $(this).attr("href")
     destination = $(elementClick).offset().top;
     $("html").animate({ scrollTop: destination - 104 }, 0);
     return false;
   });
+});
+
 
 
 
@@ -75,18 +79,6 @@ $(function () {
   )
   wow.init();
 });
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
