@@ -24,21 +24,6 @@ function topFunction() {
 
 
 
-/* scroll вниз на 100vh */
-
-function downFunction() {
-
-  if ($('nav').hasClass('down')) {
-    var movePos = $(window).scrollTop() + $(window).height();
-  }
-
-  $('html, body, main').animate({
-    scrollTop: movePos - 105 - document.documentElement.scrollTop
-  }, 0);
-  
-}
-
-
 
 /* якорь */
 
